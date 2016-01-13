@@ -1,0 +1,225 @@
+/* Large Devices Styles Starts */
+
+@media (min-width: 1200px) {
+
+/* Navigation Styles Starts */
+
+	#nav .dropdown:hover .dropdown-menu {
+		display: block;
+	}
+
+}
+
+/* Medium Devices Styles Starts */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+/* Navigation Styles Starts */
+
+	#nav .dropdown:hover .dropdown-menu {
+		display: block;
+	}
+
+/* Home Page Slider Styles Starts */
+
+	#slider-home .carousel-caption {
+		top: 50%;
+	}
+
+}
+
+/* Small Devices Styles Starts */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+/* Navigation Styles Starts */
+
+	#nav .navbar-header,
+	#nav .navbar-right,
+	#nav .navbar-nav {
+		float: none !important;
+	}
+	#nav .nav {
+		display: block;
+		text-align: center;
+	}
+	#nav .nav,
+	#nav .navbar-brand {
+		width: 100%;
+	}
+	#nav .navbar-brand,
+	#nav .navbar-brand > .img-responsive {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#nav .navbar-nav {
+		text-align: center;
+	}
+		#nav .dropdown:hover .dropdown-menu {
+			display: block;
+		}
+
+/* Home Page Slider Styles Starts */
+
+	#slider-home .carousel-caption {
+		top: 140px;
+	}
+
+/* Featured Block Styles Starts */
+
+.featured-block {
+	padding: 40px 0 10px;
+}
+	.featured-block div.col-sm-6 {
+		margin-bottom: 30px;
+	}
+
+/* Successful Stories Styles Starts */
+
+	#quote-carousel blockquote {
+		text-align: center;
+	}
+		#quote-carousel blockquote .img-responsive {
+			margin: 0 auto 20px;
+		}
+
+/* Team List Styles Starts */
+
+	.team-list ul.social-links {
+		margin-bottom: 20px;
+	}
+
+/* Footer Area Styles Starts */
+
+	.footer-links .col-sm-6 {
+		text-align: center;
+		min-height: 200px;
+		height: auto !important;
+		height: 200px;
+	}
+
+}
+
+/* Extra Small Devices Styles Starts */
+
+@media (max-width: 767px) {
+
+/* Navigation Styles Starts */
+
+	#nav .nav {
+		margin-top: 10px !important;
+	}
+	.navbar-toggle {
+		margin-top: 25px;
+	}
+	#nav.navbar-default .navbar-collapse {
+		margin-top: 20px;
+	}
+
+/* Home Page Slider Styles Starts */
+
+	#slider-home .carousel-caption {
+		display: none;
+
+	}
+
+/* Events List Styles Starts */
+
+	.breadcrumb,
+	.events-list,
+	.page-content,
+	.welcome-block {
+		text-align: center;
+	}
+
+/* Featured Block Styles Starts */
+
+	.featured-block div.col-xs-12 + div.col-xs-12 {
+		margin-top: 20px;
+	}
+
+/* Welcome Block Starts */
+
+	.page-content img.img-responsive,
+	.mission-area img.img-responsive {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+/* Our Mission Area Styles Starts */
+
+	.mission-area {
+		text-align: center;
+	}
+
+/* Successful Stories Styles Starts */
+
+	#quote-carousel blockquote {
+		text-align: center;
+	}
+		#quote-carousel blockquote .img-responsive {
+			margin: 0 auto 20px;
+		}
+
+/* Testimonial Box Styles Starts */
+
+.testimonial-box {
+	text-align: center;
+}
+	.testimonial-box .media-left {
+		margin-bottom: 20px;
+	}
+	.testimonial-box .img-responsive {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.testimonial-box .media-left,
+	.testimonial-box .media-right,
+	.testimonial-box .media-body {
+		display: block;
+	}
+
+/* Team List Styles Starts */
+
+	.team-list {
+		text-align: center;
+	}
+		.team-list .img-responsive {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+/* Blog Post Styles Starts */
+
+	.post-info-left {
+		margin-bottom: 20px;
+		display: none;
+	}
+	.post-sm-links {
+		margin: 30px 0;
+	}
+		.post-sm-links li {
+			margin-top: 10px;
+		}
+
+/* Contact Us Styles Starts */
+
+.map {
+	margin-bottom: 10px;
+}
+
+/* Footer Area Styles Starts */
+
+.footer-links,
+.copyright {
+	text-align: center;
+}
+	.copyright ul {
+		margin-top: 18px;
+	}
+	.copyright .pull-left,
+	.copyright .pull-right {
+		float: none !important;
+	}
+
+}

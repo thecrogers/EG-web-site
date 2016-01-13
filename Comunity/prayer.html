@@ -1,0 +1,175 @@
+<!-- Content Area Starts -->
+  <div class="content-area container">
+  <!-- Breadcrumbs Starts -->
+  <!-- Breadcrumbs Ends -->
+  <!-- Page Content Starts -->
+    <div class="page-content row">
+    <!-- Main Area Starts -->
+      <h2>How can we pray for you?</h2>
+      <div class="col-sm-8 col-xs-12">
+        <div class="row">
+
+            <div class="col-sm-6 col-sx-12">
+              <p>
+                <img src="images/community/Prayer.png" class="img-responsive img-box1" alt="Team Profile Image">
+              </p>
+            </div>
+
+      <div class="col-sm-6 col-xs-12">
+        <p>
+        Here at Elm Grove we believe in the power of prayer. We want to pray over your need right now, where you are.
+        </p>
+        <p>
+        Mathew 7:7 says, "Ask, and it will be given to you seek, and you will find; knock and it will be opened to you."
+        </p>
+        <p>
+        Mathew 21:22 says, "And whatever you ask in prayer, you will receive, if you have faith."
+        </p>
+    </div>
+
+</div>
+
+
+    <p style="margin-left:10px;">
+        We have seen time and time again how prayer can turn someone's life around and heal the sick.
+      </p>
+      <p>
+        We would love to pray with you in person at one of our weekly services, on the phone, or wherever you need to be met. This wall is here only for your convience and to create an easy way to share prayer request with our congergation and prayer team who would like to act as a prayer covering for you.
+      </p>
+    <div class="row">
+      <div class="col-sm-12 col-xs-12" >
+          <article class="blog-post" ng-repeat="request in Requests.Post">
+            <div class="row">
+        <!-- Post Info Left Starts -->
+              <div class="col-sm-2 col-xs-12">
+            <div class="post-info-left">
+              <div class="meta-type date">
+              <!--  {{getDay(post.published).scope()}}
+                {{getMonth(post.published).scope()}}
+                <h3 class="day spl">{{Day}}</h3>
+                <h3 class="month">{{Month}}</h3>-->
+                  <blogdate date="{{request.Submitted}}"></blogdate>
+              </div>
+              <!--<div class="meta-type media">
+                <i class="fa fa-image"></i>
+              </div>-->
+            </div>
+          </div>
+        <!-- Post Info Left Ends -->
+        <!--  Content Starts -->
+          <div class="col-sm-10 col-xs-12">
+            <div class="blog-content">
+              <div class="row">
+
+
+            <!--  Media Starts -->
+              <!--<div class="blog-media">
+               not sure what to do with this yet.
+              <img src="" alt="Blog Title" class="img-responsive">
+            </div>-->
+            <!--  Media Ends -->
+            <!--  Title Starts -->
+            <div class="col-md-4">
+              <h3 >
+              {{request.Name}}
+              </h3>
+            </div>
+            <div class="col-md-3" style="margin-top:20px;"><a>Prayed for {{request.Prayers}} Times</a></div>
+
+            <!-- Post Info Starts -->
+            <div class="col-md-5" style="margin-top:20px;">
+
+                  <button ng-click="upPrayed(request.ID,request.Prayers)" class="btn btn-block btn-secondary">I Prayed for this.</button>
+        </div>
+          </div>
+            <!-- Post Info Ends -->
+            <!--  Post Content Starts -->
+              <div class="blog-post-content">
+                <p>
+
+                  <blogpreview content="{{request.Request}}"></blogpreview>
+                </p>
+                <p>
+                    <!-- add link to testimony?
+                    <a  href="/blog/post/{{post.id}}" class="more-link">
+                    Read more
+                    <i class="fa fa-arrow-circle-right"></i>
+                  </a>-->
+                </p>
+              </div>
+            <!-- Post Content Ends -->
+            </div>
+          </div>
+        <!--  Content Ends -->
+        </div>
+        </article>
+
+
+        <!-- Post #1 Ends -->
+              <!-- Pagination Starts -->
+          <egblogPagination></egblogPagination>
+          <div style="display: inline-block;">
+          <a ng-click='goBack()' ng-show="isFirstPage()"  id="pageBack" class="more-link"><i class="fa fa-arrow-circle-left"></i> Previous Page </a>&nbsp;
+          <a href="/prayer/{{Requests.page}}"class="more-link"> Next Page <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+        <!-- Pagination Ends -->
+        </div>
+</div>
+</div>
+    <!-- Sidearea Starts -->
+      <div class="col-sm-4 col-xs-12">
+      <!-- What We Do Block Starts -->
+        <h2 style="margin-top:0px;">Have a <span>Prayer Request</span></h2>
+        <form>
+          <div id="divName" class="form-group has-feedback">
+           <label for="txtName"> Name </label>
+           <input type="text" class="form-control" id="txtName" placeholder="John Smith" >
+          </div>
+          <div id="divEmail" class="form-group has-feedback">
+           <label for="txtEmail"> Email </label>
+           <input type="email" class="form-control" id="txtEmail" placeholder="JohnSmith@domain.com" aria-describedby="txtEmailStatus">
+          </div>
+          <div id="divPhone" class="form-group has-feedback">
+           <label for="txtPhone"> Phone </label>
+           <input type="tel" class="form-control" id="txtPhone" placeholder="111-111-1111" aria-describedby="txtPhoneStatus">
+          </div>
+          <div id="divRequest" class="form-group has-feedback">
+           <label for="txtRequest"> Request </label>
+           <textarea class="form-control" id="txtRequest" rows="3" aria-describedby="txtRequestStatus"></textarea>
+          </div>
+          <div id="divPrivacy" class="form-group has-feedback">
+           <label for="ddlPrivacy"> Privacy </label>
+           <select class="form-control" id="ddlPrivacy">
+             <option value=1>Share This Request</option>
+             <option value=2>Anonymously Share This Request </option>
+             <option value=3>Send Only to Pastor</option>
+          </div>
+          <br/>
+          <div class="form-group" >
+            <input type="button" style="margin-top:20px;" ng-click="submitPrayerRequest()" class="form-control btn btn-block btn-lg btn-secondary" value="Submit">
+          </div>
+      </div>
+
+
+
+
+
+
+    <!-- Main Area Ends -->
+
+    <!-- Sidearea Ends -->
+    </div>
+
+  <!-- Page Content Ends -->
+  </div>
+<!-- Content Area Ends -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67718527-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

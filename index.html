@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ElmGrove">
+	<head>
+<base href="/">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Elm Grove Assembly of God is located in Tolar, Texas. We're a rural church with a global vision.">
+	<meta name="author" content="Caleb & Whitney Rogers">
+
+	<title>Elm Grove Assembly of God Church | Rural Church Global Mission</title>
+
+<script src="/js/Componets/jquery-1.11.1.min.js"></script>
+	<!-- Bootstrap -->
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Google Web Fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Template CSS Files  -->
+	<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<link href="/css/responsive.css" rel="stylesheet">
+	<link href="Home/fullcalendar.min.css" rel="stylesheet">
+
+
+	<!-- Angular -->
+
+  <script src="https://rawgit.com/angular/bower-angular/master/angular.js"></script>
+  <script src="https://rawgit.com/angular-ui/ui-router/master/release/angular-ui-router.js"></script>
+  <script src="https://rawgit.com/ocombe/ocLazyLoad/master/dist/ocLazyLoad.js"></script>
+	<script src="/js/App.js"></script>
+  <script src="/js/services/Backend.js"></script>
+<!--  <script src="/js/controllers/main.js"></script>-->
+
+	<!--[if lt IE 9]>
+		<script src="../js/ie8-responsive-file-warning.js"></script>
+	<![endif]-->
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/fav-144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/fav-114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/fav-72.png">
+	<link rel="apple-touch-icon-precomposed" href="images/fav-57.png">-->
+	<link rel="shortcut icon" href="images/icon.png">
+	</head>
+	<body>
+
+
+
+	<!-- Navbar Starts -->
+		<div id="nav" class="navbar navbar-default navbar-static-top home" role="navigation">
+		<!-- Container Starts -->
+			<div class="container">
+			<!-- Navbar Header Starts -->
+				<div class="navbar-header">
+				<!-- Collapse Button Starts -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				<!-- Collapse Button Ends -->
+				<!-- Logo Starts -->
+					<a href="/" class="navbar-brand">
+						<img class="img-responsive" style="float:none;" src="images/logo.png" alt="Logo">
+					</a>
+				<!-- Logo Ends -->
+				</div>
+			<!-- Navbar Header Ends -->
+			<!-- Navbar Collapse Starts -->
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a ui-sref="Home" href="/index.html">Home</a></li>
+						<li class="dropdown">
+						<a  class="dropdown-toggle" data-toggle="dropdown">About</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a ui-sref="Beliefs" href="/beliefs.html">Our Beliefs</a></li>
+						<!--	<li><a ui-sref="Staff" href="/staff.html">Staff</a></li>-->
+						<!--	<li><a ui-sref="Missions" href="/missions.html">Missions</a></li>-->
+							<li><a ui-sref="About" href="/about.html">Our Story</a></li>
+						</ul>
+						</li>
+						<li class="dropdown">
+						<a ui-sref="Media" href="/media.html">Media</a><!--ui-sref="Media" href="/media.html"-->
+						</li>
+						<li class="dropdown">
+						<a href="/prayer/1">Prayer Wall</a>
+						</li>
+						<li><a ui-sref="Blog" href="/blog.html">Blog</a></li>
+						<li><a ui-sref="Contact" href="/contact.html">Contact Us</a></li>
+					</ul>
+				</div>
+			<!-- Navbar Collapse Ends -->
+			</div>
+		<!-- Container Ends -->
+		</div>
+<div class="row" id="Alert" style="display:none;">
+	<div class="container">
+
+	<alerts></alerts>
+
+	</div>
+</div>
+
+		<ui-view></ui-view>
+
+	<!-- Footer Area Starts -->
+		<footer class="footer-area" >
+		<!-- Container Starts -->
+			<div class="container" ng-controller="footerCtr" ><!---->
+			<!-- Footer Links Starts -->
+				<div class="footer-links">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<h3>Worship Times</h3>
+							<div class="row">
+								<div class="col-md-6 col-xs-12">
+									<h4>Sunday</h4>
+									<ul class="list-unstyled" ng-repeat="sTimes in Sunday">
+										<li>{{sTimes.Title}} : {{sTimes.Time}}</li>
+									</ul>
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<h4>Wednesday</h4>
+									<ul class="list-unstyled" ng-repeat="wTimes in Wednesday">
+										<li>{{wTimes.Title}} : {{wTimes.Time}}</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-md-2 col-sm-6 col-xs-12">
+
+						</div>
+						<div class="col-md-4 col-xs-12">
+							<div class="address-block">
+								<p>
+									<img src="images/logo.png" alt="Logo" class="img-responsive">
+								</p>
+								<p>
+										3630 Hill City Hwy, Tolar, TX 76476 <br>
+									E-mail: <a href="mailto:mail@websitedemolink.org">info</a>
+								</p>
+								<p class="lead">Tel: (254) 835-4755 </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Footer Links Ends -->
+			<!-- Copyright Starts -->
+				<div class="copyright">
+					<p class="pull-left">
+						Elm Grove &copy; 2015, All Right Reserved Privacy Policy.<br>
+
+					</p>
+					<ul class="list-unstyled list-inline pull-right">
+						<li><a href="https://twitter.com/williamasanders"><span class="fa fa-twitter"></span></a></li>
+						<li><a href="https://www.facebook.com/elmgroveassemblyofgod"><span class="fa fa-facebook"></span></a></li>
+
+					</ul>
+				</div>
+			<!-- Copyright Ends -->
+			</div>
+		<!-- Container Ends -->
+		</footer>
+	<!-- Footer Area Ends -->
+	<!-- Template JS Files -->
+<!--	<script src="/js/directives/dirBlog.js"></script>
+	<script src="/js/controllers/blog.js"></script>
+	<script src="/js/controllers/post.js"></script>
+	<script src="/js/controllers/contactCtr.js"></script>
+	<script src="/js/controllers/comunity.js"></script>
+	<script src="/js/controllers/media.js"></script>
+	<script src="/js/controllers/about.js"></script>
+	<script src="/js/Componets/dirPagination.js"></script>-->
+
+
+<script src="/js/Componets/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/js/Componets/bootstrap.min.js"></script>
+
+	<!--
+
+
+	<script src="/js/Componets/angular-google-maps.min.js"></script>
+	<script src="/js/Componets/lodash.min.js"></script>-->
+	<script src='http://maps.google.cn/maps/api/js?sensor=false'></script>
+<script src="Home/moment.js"></script>
+<script src="Home/fullcalendar.min.js"></script>
+<script src="Home/gcal.js"></script>
+<!--<link src="Home/fullcalendar.min.css" rel="stylesheet">-->
+
+
+
+	</body>
+</html>
